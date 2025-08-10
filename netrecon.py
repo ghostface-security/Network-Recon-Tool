@@ -27,16 +27,37 @@ network_scan_results = {}
 # A dictionary of common ports and their service names.
 # You can easily expand this list.
 COMMON_PORTS = {
+    # FTP
+    20: 'ftp-data',
     21: 'ftp',
+    # SSH & Telnet
     22: 'ssh',
     23: 'telnet',
+    # Email
+    25: 'smtp',
+    110: 'pop3',
+    143: 'imap',
+    587: 'smtps',
+    993: 'imaps',
+    995: 'pop3s',
+    # DNS, DHCP, and Web
+    53: 'dns',
+    67: 'dhcp',
+    68: 'dhcp-client',
     80: 'http',
     443: 'https',
+    8443: 'https-alt',
+    # Windows & Remote Access
+    139: 'netbios',
     445: 'smb',
-    8080: 'http-alt',
+    3389: 'rdp',
+    5900: 'vnc',
+    # Databases & Media
     3306: 'mysql',
     5432: 'postgresql',
-    554: 'rtsp'
+    554: 'rtsp',
+    # Alternative Web
+    8080: 'http-alt',
 }
 
 # --- Helper Functions ---
