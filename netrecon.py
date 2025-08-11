@@ -32,7 +32,7 @@ class ReconToolGUI(tk.Tk):
         super().__init__()
 
         # --- Main Window Configuration ---
-        self.title("Ghostface Security: Reconnaissance Tool")
+        self.title("NetRecon: Reconnaissance Tool")
         self.geometry("850x650")
         self.resizable(True, True)
         self.style = ttk.Style(self)
