@@ -39,7 +39,7 @@ class ReconToolGUI(tk.Tk):
         self.style.theme_use('default')
 
         # Custom light theme styles
-        self.configure(bg="#f0f0f0")  # Lighter background
+        self.configure(bg="#f0f0f0") 
         self.style.configure("TFrame", background="#f0f0f0")
         self.style.configure("TLabel", background="#f0f0f0", foreground="#333333", font=("Segoe UI", 11))
         self.style.configure("Header.TLabel", font=("Segoe UI", 16, "bold"), foreground="#007bff") # Muted blue accent
@@ -230,9 +230,9 @@ class ReconToolGUI(tk.Tk):
         Checks if a host is live by attempting to connect to a common port.
         """
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            sock.settimeout(0.5) # Short timeout for speed
+            sock.settimeout(0.5) 
             try:
-                sock.connect((host, 80)) # Try to connect to port 80 (HTTP)
+                sock.connect((host, 80)) 
                 return True
             except (socket.timeout, ConnectionRefusedError, OSError):
                 return False
